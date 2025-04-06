@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Brain, LineChart, ShieldCheck } from "lucide-react";
+import { Brain, LineChart, ShieldCheck, Zap } from "lucide-react";
 
 const features = [
   {
@@ -20,12 +20,18 @@ const features = [
     title: "Enterprise Security",
     description:
       "Bank-level encryption and comprehensive security protocols ensure your data and AI implementations remain protected."
+  },
+  {
+    icon: <Zap className="h-10 w-10 text-purple-600" />,
+    title: "Rapid Deployment",
+    description:
+      "Get from concept to production in weeks, not months, with our streamlined implementation methodology and integration frameworks."
   }
 ];
 
-const KeyPoints = () => {
+const FeaturesGrid = () => {
   return (
-    <section className="py-20 bg-slate-50">
+    <section id="features" className="py-20 bg-slate-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900 font-display">
@@ -37,7 +43,7 @@ const KeyPoints = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <div 
               key={index} 
@@ -54,4 +60,4 @@ const KeyPoints = () => {
   );
 };
 
-export default KeyPoints;
+export default FeaturesGrid;
